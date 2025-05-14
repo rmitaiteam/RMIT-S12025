@@ -1,0 +1,192 @@
+import React from "react";
+
+const FinalAnimation = ({ text = "Generating new Ads" }) => {
+  return (
+    <div className="loading-animation">
+      <style jsx>{`
+        .loading-animation {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .loading-text {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #f2f2f2;
+        }
+
+        @-webkit-keyframes animate-svg-stroke-1 {
+          0% {
+            stroke-dashoffset: 87.51262664794922px;
+            stroke-dasharray: 87.51262664794922px;
+          }
+
+          100% {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 87.51262664794922px;
+          }
+        }
+
+        @keyframes animate-svg-stroke-1 {
+          0% {
+            stroke-dashoffset: 87.51262664794922px;
+            stroke-dasharray: 87.51262664794922px;
+          }
+
+          100% {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 87.51262664794922px;
+          }
+        }
+
+        .svg-elem-1 {
+          -webkit-animation: animate-svg-stroke-1 1s
+              cubic-bezier(0.47, 0, 0.745, 0.715) 0s both,
+            animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s
+              both;
+          animation: animate-svg-stroke-1 1s cubic-bezier(0.47, 0, 0.745, 0.715)
+              0s both,
+            animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s
+              both;
+        }
+
+        @-webkit-keyframes animate-svg-stroke-2 {
+          0% {
+            stroke-dashoffset: 27.995725631713867px;
+            stroke-dasharray: 27.995725631713867px;
+          }
+
+          100% {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 27.995725631713867px;
+          }
+        }
+
+        @keyframes animate-svg-stroke-2 {
+          0% {
+            stroke-dashoffset: 27.995725631713867px;
+            stroke-dasharray: 27.995725631713867px;
+          }
+
+          100% {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 27.995725631713867px;
+          }
+        }
+
+        @-webkit-keyframes animate-svg-fill-2 {
+          0% {
+            fill: transparent;
+          }
+
+          100% {
+            fill: rgb(66, 153, 255);
+          }
+        }
+
+        @keyframes animate-svg-fill-2 {
+          0% {
+            fill: transparent;
+          }
+
+          100% {
+            fill: rgb(66, 153, 255);
+          }
+        }
+
+        .svg-elem-2 {
+          -webkit-animation: animate-svg-stroke-2 1s
+              cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both,
+            animate-svg-fill-2 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s
+              both;
+          animation: animate-svg-stroke-2 1s cubic-bezier(0.47, 0, 0.745, 0.715)
+              0.12s both,
+            animate-svg-fill-2 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s
+              both;
+        }
+
+        @-webkit-keyframes animate-svg-stroke-3 {
+          0% {
+            stroke-dashoffset: 27.995723724365234px;
+            stroke-dasharray: 27.995723724365234px;
+          }
+
+          100% {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 27.995723724365234px;
+          }
+        }
+
+        @keyframes animate-svg-stroke-3 {
+          0% {
+            stroke-dashoffset: 27.995723724365234px;
+            stroke-dasharray: 27.995723724365234px;
+          }
+
+          100% {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 27.995723724365234px;
+          }
+        }
+
+        @-webkit-keyframes animate-svg-fill-3 {
+          0% {
+            fill: transparent;
+          }
+
+          100% {
+            fill: rgb(66, 153, 255);
+          }
+        }
+
+        @keyframes animate-svg-fill-3 {
+          0% {
+            fill: transparent;
+          }
+
+          100% {
+            fill: rgb(66, 153, 255);
+          }
+        }
+
+        .svg-elem-3 {
+          -webkit-animation: animate-svg-stroke-3 1s
+              cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s both,
+            animate-svg-fill-3 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both;
+          animation: animate-svg-stroke-3 1s cubic-bezier(0.47, 0, 0.745, 0.715)
+              0.24s both,
+            animate-svg-fill-3 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 1s both;
+        }
+      `}</style>
+      <svg
+        width="33"
+        height="31"
+        viewBox="0 0 33 31"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19.3931 21.7604L18.6348 24.2371C17.8689 26.7383 17.486 27.9889 16.8963 28.3057C16.3871 28.5792 15.764 28.5792 15.2548 28.3057C14.665 27.9889 14.2822 26.7383 13.5163 24.2371L12.758 21.7604C12.4668 20.8092 12.3212 20.3338 12.0487 19.9429C11.8076 19.597 11.4953 19.3007 11.1307 19.0719C10.7188 18.8135 10.2175 18.6754 9.21498 18.3991L6.60439 17.6796C3.96799 16.953 2.64979 16.5898 2.31585 16.0303C2.02753 15.5472 2.02753 14.9561 2.31585 14.473C2.64979 13.9135 3.96799 13.5503 6.60439 12.8237L9.21497 12.1042C10.2175 11.8279 10.7188 11.6898 11.1307 11.4313C11.4953 11.2026 11.8076 10.9063 12.0487 10.5604C12.3212 10.1696 12.4668 9.69405 12.758 8.74292L13.5163 6.2662C14.2822 3.765 14.665 2.5144 15.2548 2.19759C15.764 1.92405 16.3871 1.92405 16.8963 2.19759C17.486 2.5144 17.8689 3.765 18.6348 6.2662L19.3931 8.7429C19.6843 9.69403 19.8299 10.1696 20.1023 10.5604C20.3434 10.9063 20.6558 11.2026 21.0204 11.4313C21.4324 11.6898 21.9335 11.8279 22.9361 12.1042L25.5467 12.8237C28.1831 13.5503 29.5013 13.9135 29.8352 14.473C30.1235 14.9561 30.1235 15.5472 29.8352 16.0303C29.5013 16.5898 28.1831 16.953 25.5467 17.6796L22.9361 18.3991C21.9335 18.6754 21.4324 18.8135 21.0204 19.0719C20.6558 19.3007 20.3434 19.597 20.1023 19.9429C19.8299 20.3338 19.6843 20.8092 19.3931 21.7604Z"
+          stroke="#D2D2D2"
+          stroke-width="2"
+          className="svg-elem-1"
+        ></path>
+        <path
+          d="M5.38811 5.92375L4.71938 7.85729C4.58483 8.24633 4.00473 8.24633 3.87018 7.85729L3.20145 5.92375C3.06851 5.53938 2.75076 5.23792 2.34561 5.1118L0.307552 4.47736C-0.102517 4.34971 -0.102517 3.79936 0.307552 3.67171L2.34561 3.03727C2.75076 2.91115 3.06851 2.60969 3.20145 2.22532L3.87018 0.29178C4.00473 -0.0972599 4.58483 -0.0972599 4.71938 0.29178L5.38811 2.22532C5.52105 2.60969 5.83881 2.91115 6.24395 3.03727L8.28201 3.67171C8.69208 3.79936 8.69208 4.34971 8.28201 4.47736L6.24395 5.1118C5.83881 5.23792 5.52105 5.53938 5.38811 5.92375Z"
+          fill="#4299FF"
+          className="svg-elem-2"
+        ></path>
+        <path
+          d="M28.9506 28.278L28.2819 30.2115C28.1473 30.6005 27.5672 30.6005 27.4326 30.2115L26.764 28.278C26.631 27.8936 26.3132 27.5921 25.9081 27.466L23.87 26.8316C23.46 26.7039 23.46 26.1536 23.87 26.0259L25.9081 25.3915C26.3132 25.2654 26.631 24.9639 26.764 24.5795L27.4326 22.646C27.5672 22.257 28.1473 22.257 28.2819 22.646L28.9506 24.5795C29.0835 24.9639 29.4013 25.2654 29.8064 25.3915L31.8445 26.0259C32.2545 26.1536 32.2545 26.7039 31.8445 26.8316L29.8064 27.466C29.4013 27.5921 29.0835 27.8936 28.9506 28.278Z"
+          fill="#4299FF"
+          className="svg-elem-3"
+        ></path>
+      </svg>
+
+      <div className="loading-text">{text}</div>
+    </div>
+  );
+};
+
+export default FinalAnimation;
